@@ -1,5 +1,5 @@
 from rest_framework import generics
-from blogs.models import Blog
+from blogs.models import Blog, Comment
 from blogs.serializers import blogSerializer ,commentSerializer
  
 
@@ -12,7 +12,6 @@ class BlogList(generics.ListCreateAPIView):
 
 
 class CommentList(generics.ListCreateAPIView):
-    queryset = Blog.objects.all()
+    queryset = Comment.objects.all()
     serializer_class = commentSerializer
     # queryset = Comment.objects.all()
-    
