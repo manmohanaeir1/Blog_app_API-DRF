@@ -15,3 +15,15 @@ class CommentList(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = commentSerializer
     # queryset = Comment.objects.all()
+
+
+class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = blogSerializer
+    lookup_field = 'pk'  # Use 'pk' as the lookup field instead of 'id'
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = commentSerializer
+    lookup_field = 'pk'  # Use 'pk' as the lookup field instead of 'id'
+        
