@@ -129,3 +129,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 1,  # Number of items per page
 }
+
+
+# for a custome file pagination then we need to create a custom pagination class 
