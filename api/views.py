@@ -14,8 +14,7 @@ class BlogList(generics.ListCreateAPIView):
 class CommentList(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = commentSerializer
-    # queryset = Comment.objects.all()
-
+ 
 
 class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
